@@ -1,0 +1,26 @@
+Exp 9: Alpha-Beta Pruning
+Aim: Write a Program to Implement Alpha-Beta Pruning using Python.
+Alpha-Beta Pruning
+Alpha-Beta Pruning is an optimization technique for the Minimax algorithm. It reduces the
+number of nodes evaluated by the Minimax algorithm in a search tree, improving efficiency
+without affecting the final result.
+Problem Statement
+1. Given a two-player game tree (e.g., Tic-Tac-Toe, Chess), the goal is to:
+o Find the best possible move for the maximizing player while assuming the opponent
+plays optimally.
+2. Alpha-beta pruning improves Minimax by "pruning" branches that cannot affect the final
+decision.
+Key Terms
+• Alpha – Best value the maximizer can guarantee so far (initialized to -∞).
+• Beta – Best value the minimizer can guarantee so far (initialized to +∞).
+• Pruning – Stopping evaluation of a branch when the outcome is already determined.
+Algorithm
+1. Start with initial alpha = -∞ and beta = +∞.
+2. Apply the Minimax algorithm with the following pruning rules:
+o If the current value exceeds beta → Stop searching (prune the branch).
+o If the current value is less than alpha → Stop searching (prune the branch).
+3. Update alpha and beta values during the search:
+o If the value is greater than alpha → Update alpha.
+o If the value is less than beta → Update beta.
+4. Continue until all possible moves are evaluated or pruned.
+5. Return the optimal value for the maximizing player.
