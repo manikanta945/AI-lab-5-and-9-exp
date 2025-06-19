@@ -1,0 +1,28 @@
+Exp 5: Water-Jug problem
+Aim: Write a Program to Implement the Water-Jug problem using Python.
+Water Jug Problem
+The Water Jug Problem is a classic AI problem where you are given two jugs of different
+capacities and need to measure a specific amount of water using them.
+Problem Statement
+• You have two jugs with capacities X liters and Y liters.
+• Your goal is to measure exactly Z liters using the jugs.
+• Allowed Operations:
+o Fill a jug.
+o Empty a jug.
+o Pour water from one jug to another until one is full or the other is empty.
+Algorithm:
+1. Create a queue to store the state of jugs (x, y).
+2. Create a set to store visited states to avoid repetition.
+3. Enqueue the initial state (0, 0) and mark it as visited.
+4. While the queue is not empty:
+• Dequeue the current state (a, b).
+• If a == Z or b == Z, print the steps and return success.
+• Generate the next possible states by:
+o Filling jug X
+o Filling jug Y
+o Emptying jug X
+o Emptying jug Y
+o Pouring from X to Y
+o Pouring from Y to X
+• If the new state is not visited, add it to the queue and mark it as visited.
+5. If no solution is found, return failure.
